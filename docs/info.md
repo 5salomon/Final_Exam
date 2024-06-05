@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Se realiza una coenxión a traves del protocolo UART con la placa Basys3 y una PC, utilizando un monitor serial para ver el mensaje transmitido.
 
 ## How to test
 
-Explain how to use your project
+Se ingresa la información a traves de los switch de la placa Basys3, se utiliza el código ASCII para ingresar los datos en código binario.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+Se utilizan un cable Micro USB; placa Basys3 y una PC.
