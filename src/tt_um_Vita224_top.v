@@ -24,6 +24,7 @@ input [7:0]sw,
 input btn0,
 input btn1,
 input clk,
+input  wire       ena,      // always 1 when the design is powered, so you can ignore it
 output TxD,
 output TxD_debug,
 output transmit_debug,
