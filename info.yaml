@@ -23,20 +23,20 @@ project:
 # The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
 pinout:
   # Inputs
-  ui[0]: ""
-  ui[1]: ""
-  ui[2]: ""
-  ui[3]: ""
+  ui[0]: "[7:0]sw"
+  ui[1]: "btn0"
+  ui[2]: "btn1"
+  ui[3]: "clk"
   ui[4]: ""
   ui[5]: ""
   ui[6]: ""
   ui[7]: ""
 
   # Outputs
-  uo[0]: ""
-  uo[1]: ""
-  uo[2]: ""
-  uo[3]: ""
+  uo[0]: "TxD"
+  uo[1]: "TxD_debug"
+  uo[2]: "transmit_debug"
+  uo[3]: "clk_debug"
   uo[4]: ""
   uo[5]: ""
   uo[6]: ""
