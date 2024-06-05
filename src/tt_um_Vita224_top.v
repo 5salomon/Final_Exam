@@ -30,15 +30,15 @@ input  wire       ena,      // will go high when the design is enabled
 input  wire       clk,      // clock
 input  wire       rst_n,     // reset_n - low to reset
   
-input [7:0]sw,
-input btn0,
-input btn1,
-input clk,
-output TxD,
-output TxD_debug,
-output transmit_debug,
-output button_debug, 
-output clk_debug
+//input [7:0]sw,
+//input btn0,
+//input btn1,
+//input clk,
+//output TxD,
+//output TxD_debug,
+//output transmit_debug,
+//output button_debug, 
+//output clk_debug
 ); 
 
 wire transmit;
