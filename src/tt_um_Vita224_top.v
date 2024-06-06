@@ -41,11 +41,11 @@ input  wire       rst_n,     // reset_n - low to reset
 //output clk_debug
 ); 
 
-wire transmit;
-assign TxD_debug = TxD;
-assign transmit_debug = transmit;
-assign button_debug = btn1;
-assign clk_debug = clk;
+//wire transmit;
+//assign TxD_debug = TxD;
+//assign transmit_debug = transmit;
+//assign button_debug = btn1;
+//assign clk_debug = clk;
 
 
 transmit_debouncing D2 (.clk(clk), .btn1(btn1), .transmit(transmit));
