@@ -33,7 +33,7 @@ pinout:
   ui[6]: ""
   ui[7]: ""
 
-  # Outputs
+  # Outputs 
   uo[0]: "TxD"
   uo[1]: "TxD_debug"
   uo[2]: "transmit_debug"
