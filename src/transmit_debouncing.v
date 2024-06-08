@@ -22,7 +22,7 @@
 module transmit_debouncing #(parameter threshold = 100000)// set parameter thresehold to guage how long button pressed
 (
 input clk, //clock signal
-input btn1, //input buttons for transmit and reset
+input uio_in, //input buttons for transmit and reset
 output reg transmit //transmit signal
     );
     
@@ -34,7 +34,7 @@ reg [30:0]count = 0; //20 bits count for increment & decrement when button is pr
 // First use two flip-flops to synchronize the button signal the "clk" clock domain
 
 always @(posedge clk)begin
-button_ff1 <= btn1;
+button_ff1 <= uio_in;
 button_ff2 <= button_ff1;
 end
 
