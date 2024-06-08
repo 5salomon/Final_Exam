@@ -45,7 +45,7 @@ wire transmit;
 //assign clk_debug = clk;
 
     wire tx;
-  assign uo_out[0]=1'b0;
+    assign uo_out[0]=1'b0;
 	assign uo_out[1]=1'b0;
 	assign uo_out[2]=1'b0;
 	assign uo_out[3]=1'b0;
@@ -53,6 +53,16 @@ wire transmit;
 	assign uo_out[5]=1'b0;
 	assign uo_out[6]=1'b0;
 	assign uo_out[7]=1'b0;
+	
+	assign uio_in[1]=1'b0;
+	assign uio_in[2]=1'b0;
+	assign uio_in[3]=1'b0;
+	assign uio_in[4]=1'b0;
+	assign uio_in[5]=1'b0;
+	assign uio_in[6]=1'b0;
+	assign uio_in[7]=1'b0;
+	
+	assign ena=1'b0;
 	
 assign uio_out = 8'b00000000;
 assign uio_oe = 8'b00000000;
