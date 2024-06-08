@@ -62,7 +62,7 @@ wire transmit;
 //	assign uio_in[6]=1'b0;
 //	assign uio_in[7]=1'b0;
 	
-	assign ena=1'b0;
+//	assign ena=1'b0;
 	
 assign uio_out = 8'b00000000;
 assign uio_oe = 8'b00000000;
