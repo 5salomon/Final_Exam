@@ -54,6 +54,7 @@ wire transmit;
 	assign uo_out[6]=1'b0;
 	assign uo_out[7]=1'b0;
 	
+	assign uio_in[1]=uio_in;
 	assign uio_in[1]=1'b0;
 	assign uio_in[2]=1'b0;
 	assign uio_in[3]=1'b0;
@@ -68,7 +69,7 @@ assign uio_out = 8'b00000000;
 assign uio_oe = 8'b00000000;
 
 
-	transmit_debouncing D2 (.clk(clk), .uio_in(uio_in[0]), .transmit(transmit));
+transmit_debouncing D2 (.clk(clk), .uio_in(uio_in), .transmit(transmit));
 transmitter T1 (.clk(clk), .rst_n(rst_n),.transmit(transmit),.tx(tx),.data(ui_in));
 
 
