@@ -22,10 +22,10 @@
 
 module transmitter(
 input clk, //UART input clock
-input reset, // reset signal
+input rst_n, // reset signal
 input transmit, //btn signal to trigger the UART communication
 input [7:0] data, // data transmitted
-output reg TxD // Transmitter serial output. TxD will be held high during reset, or when no transmissions aretaking place. 
+output reg tx // Transmitter serial output. TxD will be held high during reset, or when no transmissions aretaking place. 
     );
 
 //internal variables
@@ -42,7 +42,7 @@ reg clear; //clear signal to start reset the bitcounter for UART transmission
 //UART transmission logic
 always @ (posedge clk) 
 begin 
-    if (reset) 
+    if (rst_n) 
 	   begin // reset is asserted (reset = 1)
         state <=0; // state is idle (state = 0)
         counter <=0; // counter for baud rate is reset to 0 
@@ -73,7 +73,7 @@ begin
     load <=0; // set load equal to 0 at the beginning
     shift <=0; // set shift equal to 0 at the beginning
     clear <=0; // set clear equal to 0 at the beginning
-    TxD <=1; // set TxD equals to during no transmission
+    tx <=1; // set TxD equals to during no transmission
     case (state)
         0: begin // idle state
              if (transmit) begin // assert transmit input
@@ -84,7 +84,7 @@ begin
              end 
 		else begin // if transmit not asserted
              nextstate <= 0; // next state is back to idle state
-             TxD <= 1; 
+             tx <= 1; 
              end
            end
         1: begin  // transmit state
@@ -94,7 +94,7 @@ begin
              end 
 		else begin // if transmisssion is not complete 
              nextstate <= 1; // set nextstate to 1 to stay in transmit state
-             TxD <= rightshiftreg[0]; // shift the bit to output TxD
+             tx <= rightshiftreg[0]; // shift the bit to output TxD
              shift <=1; // set shift to 1 to continue shifting the data
              end
            end
