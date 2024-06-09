@@ -3,7 +3,7 @@
 
 # defaults
 SIM ?= icarus
-TOPLEVEL_LANG ?= verilog
+TOPLEVEL_LANG ?= Systemverilog
 SRC_DIR = $(PWD)/../src
 PROJECT_SOURCES = project.v
 
